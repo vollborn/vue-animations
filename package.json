@@ -1,5 +1,4 @@
 {
-  "private": "true",
   "name": "vue-animations",
   "version": "0.0.1",
   "description": "A simple vue package with some animation classes to fade elements in",
