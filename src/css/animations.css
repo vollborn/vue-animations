@@ -1,0 +1,90 @@
+/*
+    Animations
+*/
+
+.vue-animations.fade-in {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.vue-animations.fade-from-left {
+    opacity: 0;
+    transform: translate(-30px, 0);
+    transition: 0.5s ease-out;
+}
+
+.vue-animations.fade-from-right {
+    opacity: 0;
+    transform: translate(30px, 0);
+    transition: 0.5s ease-out;
+}
+
+.vue-animations.size-fade-in {
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: 0.5s ease-out;
+}
+
+.vue-animations.draw-to-right {
+    width: 0;
+    transition: 0.5s ease-in-out;
+}
+
+/*
+    Applied
+*/
+
+.vue-animations.applied.fade-in {
+    opacity: 1;
+}
+
+.vue-animations.applied.fade-from-left {
+    opacity: 1;
+    transform: none;
+}
+
+.vue-animations.applied.fade-from-right {
+    opacity: 1;
+    transform: none;
+}
+
+.vue-animations.applied.size-fade-in {
+    opacity: 1;
+    transform: none;
+}
+
+.vue-animations.applied.draw-to-right {
+    width: 100%;
+}
+
+@media only screen and (max-width: 800px) {
+    .vue-animations.fade-in,
+    .vue-animations.fade-from-left,
+    .vue-animations.fade-from-right {
+        opacity: 0;
+        transition: 0.3s ease-in;
+        transform: unset;
+    }
+
+    .vue-animations.applied.fade-in,
+    .vue-animations.applied.fade-from-left,
+    .vue-animations.applied.fade-from-right {
+        opacity: 1;
+    }
+}
+
+/*
+    Additions
+*/
+
+.delay-1 {
+    transition-delay: 0.3s;
+}
+
+.delay-2 {
+    transition-delay: 0.6s;
+}
+
+.delay-3 {
+    transition-delay: 0.9s;
+}

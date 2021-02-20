@@ -1,0 +1,25 @@
+{
+  "private": "true",
+  "name": "vue-animations",
+  "version": "0.0.1",
+  "description": "A simple vue package with some animation classes to fade elements in",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vollborn/vue-animations.git"
+  },
+  "keywords": [
+    "animations",
+    "effects",
+    "vue"
+  ],
+  "author": "Oliver Vollborn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vollborn/vue-animations/issues"
+  },
+  "homepage": "https://github.com/vollborn/vue-animations#readme"
+}
