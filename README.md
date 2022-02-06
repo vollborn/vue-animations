@@ -17,7 +17,7 @@ yarn add vollborn/vue-animations
 ## Usage
 To use the scroll animations, you need to import the package to your project beforehand.
 ```js
-import 'vue-animations';
+import VueAnimations from 'vue-animations';
 ```
 
 Then you need to add two classes to your element.
@@ -29,6 +29,8 @@ Then you need to add two classes to your element.
 </div>
 ```
 
+### Effects
+
 Currently available effect classes:
 - fade-in
 - fade-from-left
@@ -36,7 +38,22 @@ Currently available effect classes:
 - size-fade-in
 - draw-to-right
 
-The classes *.fade-from-left* and *.fade-from-right* automatically change to *.fade-in* at 800px screen width for better mobile support.
+The classes *.fade-from-left* and *.fade-from-right* automatically change to *.fade-in* at 600px screen width for better mobile support.
+
+### Element list
+
+The element list is automatically updated on every scroll event. You can disable this to improve performance.
+```js
+VueAnimations.setAutomaticElementListReload(false);
+```
+
+If disabled, the list needs to updated manually, otherwise the animations *will not* work.
+You can do that with the reloadElements function:
+```js
+VueAnimations.reloadElements()
+```
+
+For the best possible performance the list should be updated on every component mount, that implements any animations.
 
 
 ## More Effects
