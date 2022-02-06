@@ -1,23 +1,65 @@
-require('./src/css/animations.css');
+/*
+ * Vue Animations by Oliver Vollborn
+ */
+
+// Helpers
+require("./src/css/delay.css");
+
+// Animations
+require("./src/css/draw-to-right.css");
+require("./src/css/fade-from-left.css");
+require("./src/css/fade-from-right.css");
+require("./src/css/fade-in.css");
+require("./src/css/size-fade-in.css");
 
 let elements = [];
+let options = {
+  automaticElementListReload: true
+};
 
-const elementIsOnScreen = function (element) {
+/**
+ * @param {Element} element
+ * @returns {boolean}
+ */
+const isOnScreen = (element) => {
   let rect = element.getBoundingClientRect();
-  let elemTop = rect.top + 100;
-  let elemBottom = rect.bottom;
-  return elemTop < window.innerHeight && elemBottom >= 0;
+  return rect.top + 100 < window.innerHeight && rect.bottom >= 0;
 }
 
-const handleAnimations = function () {
+/**
+ * @returns {Element[]}
+ */
+const reloadElements = () => {
   elements = Array.from(document.getElementsByClassName('vue-animations'));
+  return elements;
+}
+
+/**
+ * @param {boolean} shouldReload
+ */
+const setAutomaticElementListReload = (shouldReload = true) => {
+  options.automaticElementListReload = shouldReload;
+}
+
+const handle = () => {
+  if (options.automaticElementListReload) {
+    reloadElements();
+  }
+
   for (let i = 0; i < elements.length; i++) {
-    let elem = elements[i];
-    if (!elem.classList.contains('applied') && elementIsOnScreen(elem)) {
-      elem.classList.add('applied');
+    let element = elements[i];
+    if (!element.classList.contains('applied') && isOnScreen(element)) {
+      element.classList.add('applied');
     }
   }
 }
 
-document.addEventListener('scroll', handleAnimations);
-module.exports = {}
+document.addEventListener('scroll', handle);
+
+export default {
+  elements,
+  options,
+  setAutomaticElementListReload,
+  isOnScreen,
+  handle
+}

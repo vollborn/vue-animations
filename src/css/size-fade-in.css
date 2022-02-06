@@ -1,0 +1,10 @@
+.vue-animations.size-fade-in {
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+    transition: 0.5s ease-out;
+}
+
+.vue-animations.applied.size-fade-in {
+    opacity: 1;
+    transform: none;
+}

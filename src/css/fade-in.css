@@ -1,0 +1,8 @@
+.vue-animations.fade-in {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.vue-animations.applied.fade-in {
+    opacity: 1;
+}
