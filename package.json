@@ -12,6 +12,9 @@
     "effects",
     "vue"
   ],
+  "dependencies": {
+    "vue": "*"
+  },
   "author": "Oliver Vollborn",
   "license": "MIT",
   "bugs": {

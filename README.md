@@ -4,12 +4,12 @@ This package contains some JavaScript & CSS assets for fading elements in on scr
 
 ## Installation
 NPM:
-```
+```shell
 npm install vollborn/vue-animations
 ```
 
 Yarn:
-```
+```shell
 yarn add vollborn/vue-animations
 ```
 
@@ -17,45 +17,45 @@ yarn add vollborn/vue-animations
 ## Usage
 To use the scroll animations, you need to import the package to your project beforehand.
 ```js
+// Import the package
 import VueAnimations from 'vue-animations';
+
+// Registering the component
+Vue.component('VueAnimation', VueAnimations.VueAnimation);
 ```
 
-Then you need to add two classes to your element.
-<br/>The first class should be *vue-animations*, and the second class the desired effect you want.
+Using the following component you can apply your desired effect.
 
 ```html
-<div class="vue-animations fade-in">
+<VueAnimation type="fade-in">
   Hello World!
-</div>
+</VueAnimation>
 ```
 
-### Effects
+## Effects
 
-Currently available effect classes:
+Currently available effect types:
 - fade-in
 - fade-from-left
 - fade-from-right
 - size-fade-in
 - draw-to-right
 
-The classes *.fade-from-left* and *.fade-from-right* automatically change to *.fade-in* at 600px screen width for better mobile support.
-
-### Element list
-
-The element list is automatically updated on every scroll event. You can disable this to improve performance.
-```js
-VueAnimations.setAutomaticElementListReload(false);
-```
-
-If disabled, the list needs to updated manually, otherwise the animations *will not* work.
-You can do that with the reloadElements function:
-```js
-VueAnimations.reloadElements()
-```
-
-For the best possible performance the list should be updated on every component mount, that implements any animations.
+The types *.fade-from-left* and *.fade-from-right* automatically change to *.fade-in* at 600px screen width for better mobile support.
 
 
 ## More Effects
 You can simply create your own effects by attaching the class *.vue-animations* to your element.
 <br />If it is visible on screen, the class *.applied* will be added.
+
+An example:
+```css
+.vue-animations.fade-in {
+    opacity: 0;
+    transition: 0.3s ease-in;
+}
+
+.vue-animations.applied.fade-in {
+    opacity: 1;
+}
+```
