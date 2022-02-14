@@ -36,7 +36,7 @@ You can also apply delay to your animation. The maximum amount of delay is curre
 
 ```html
 <VueAnimation type="fade-in" delay="1">
-  Hello World!
+    Hello World!
 </VueAnimation>
 ```
 
