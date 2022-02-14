@@ -1,6 +1,6 @@
 {
   "name": "vue-animations",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple vue package with some animation classes to fade elements in",
   "main": "index.js",
   "repository": {
@@ -8,9 +8,13 @@
     "url": "git+https://github.com/vollborn/vue-animations.git"
   },
   "keywords": [
+    "css",
+    "vuejs",
+    "vue",
+    "animation",
     "animations",
     "effects",
-    "vue"
+    "scroll"
   ],
   "dependencies": {
     "vue": "*"
