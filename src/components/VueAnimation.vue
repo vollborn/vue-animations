@@ -31,7 +31,7 @@ export default {
     classes() {
       let classes = 'vue-animations ' + this.type;
       if (this.delay) {
-        classes += 'delay-' + this.delay
+        classes += ' delay-' + this.delay
       }
       return classes;
     }

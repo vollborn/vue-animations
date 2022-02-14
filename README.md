@@ -28,6 +28,14 @@ Using the following component you can apply your desired effect.
 
 ```html
 <VueAnimation type="fade-in">
+    Hello World!
+</VueAnimation>
+```
+
+You can also apply delay to your animation. The maximum amount of delay is currently set to **5**.
+
+```html
+<VueAnimation type="fade-in" delay="1">
   Hello World!
 </VueAnimation>
 ```
